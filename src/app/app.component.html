@@ -1,0 +1,96 @@
+<div class="jumbotron">
+  <h1 class="display-3 text-warning font-weight-bold">
+    <i class="fa fa-calculator" aria-hidden="true"></i> Angular Calculator
+  </h1>
+  <p class="lead">Implement Your Calculation</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, quod veritatis rem optio aut iure nihil
+    dignissimos cumque quas odio delectus, officiis tempora? Dolores autem obcaecati ex magnam, atque eveniet.</p>
+  <hr class="my-2">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12 col-md-4 col-lg-4 col-sm-4 col-xl-4"></div>
+      <div class="col-12 col-md-4 col-lg-4 col-sm-4 col-xl-4 alert alert-warning border border-warning">
+        <div class="row">
+          <div class="h1 col-12 text-warning">SHIVAM'S CALCULATOR <i class="fa fa-calculator" aria-hidden="true"></i>
+          </div>
+          <div class="col-12 col-md-9 col-lg-9 col-sm-9 col-xl-9 px-0 mx-0  form-check-inline">
+            <input type="text" value={{str}}
+              class="text-right border border-warning alert alert-light form-control form-control-lg" />
+          </div>
+          <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0  form-check-inline">
+            <div class="alert-light alert  form-check-inline border border-warning">
+              <span class="alert-light text-warning font-weight-bold">{{value}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="text-center text-danger"> {{err}}</div>
+        <div class="border-top border-warning"></div>
+        <br>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1  form-check-inline">
+              <button type="button" (click)="add(1)" value="1" class="btn btn-warning btn-lg">1</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1  form-check-inline">
+              <button type="button" (click)="add(2)" value="2" class="btn btn-warning btn-lg">2</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0  py-1 my-1 form-check-inline">
+              <button type="button" (click)="add(3)" value="3" class="btn btn-warning btn-lg">3</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0  py-1 my-1 form-check-inline">
+              <button type="button" (click)="solve('+')" value="+" class="btn btn-dark btn-lg">+</button>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" (click)="add(4)" value="4" class="btn btn-warning btn-lg">4</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" (click)="add(5)" value="5" class="btn btn-warning btn-lg">5</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" (click)="add(6)" value="6" class="btn btn-warning btn-lg">6</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" (click)="solve('~')" value="-" class="btn btn-dark  btn-lg">-</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" (click)="add(7)" value="7" class="btn btn-warning btn-lg">7</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" (click)="add(8)" value="8" class="btn btn-warning btn-lg">8</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" (click)="add(9)" value="9" class="btn btn-warning btn-lg">9</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3  px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" (click)="solve('*')" value="*" class="btn btn-dark  btn-lg">x</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" value="C" (click)="clear()" class=" btn btn-danger btn-lg">C</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" (click)="add(0)" value="0" class="btn btn-warning btn-lg">0</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" value="=" (click)="eqsolve()" class="btn btn-warning btn-lg">=</button>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3 col-sm-3 col-xl-3 px-0 mx-0 py-1 my-1 form-check-inline">
+              <button type="button" (click)="solve('/')" value="/" class="btn btn-dark  btn-lg">/</button>
+            </div>
+          </div>
+          <div class="border-bottom my-3 border-warning"></div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4 col-sm-4 col-xl-4"></div>
+    </div>
+  </div>
+</div>
